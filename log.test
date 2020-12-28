@@ -1,0 +1,40 @@
+27/12/2020 00:05:30,848 ===== Request =====
+code = 0
+trigger1 = false
+trigger2 = false
+field = {
+      1|status=0
+      2|tag=abcdef
+      3|price=35
+}
+===== Response =====
+code = 1
+trigger1 = false
+trigger2 = false
+field = {
+      5|id=123
+      1|status=404
+      2|tag=ghijkl
+      4|barcode=26121111
+      3|price=35
+}
+27/12/2020 00:10:35,941 ===== Request =====
+code = 0
+trigger1 = false
+trigger2 = false
+field = {
+      1|status=0
+      2|tag=abcdef
+      3|price=35
+}
+===== Response =====
+code = 1
+trigger1 = false
+trigger2 = false
+field = {
+      5|id=123
+      1|status=404
+      2|tag=ghijkl
+      4|barcode=26121111
+      3|price=35
+}

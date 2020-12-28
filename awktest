@@ -1,0 +1,26 @@
+BEGIN {
+    OFS = "\t"
+    numTags = split("Time id status tag price barcode",tags)
+    for (tagNr=1; tagNr<=numTags; tagNr++) {
+        tag = tags[tagNr]
+        printf "%s%s", tag, (tagNr<numTags ? OFS : ORS)
+    }
+}
+/= Request =/ {
+   time = substr($0,1,23)
+}
+sub(/^[[:space:]]*([0-9]+\|)?/,"") {
+   tag = val = $0
+   sub(/[[:space:]]*=.*/,"",tag)
+   sub(/[^=]+=[[:space:]]*/,"",val)
+   tag2val[tag] = val
+}
+/^}/ {
+   tag2val["Time"] = time
+   for (tagNr=1; tagNr<=numTags; tagNr++) {
+       tag = tags[tagNr]
+       val = (tag in tag2val ? tag2val[tag] : "Null")
+       printf "%s%s", val, (tagNr<numTags ? OFS : ORS)
+   }
+   delete tag2val
+}

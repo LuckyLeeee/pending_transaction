@@ -1,0 +1,23 @@
+26/12/2020 00:01:38,848 INFO [abc-4] TCOC[118] : ===== TCOCRequest =====
+Cramsg:
+code = 0
+isGenCdrTrigger = false
+isGenCbaTrigger = false
+mapField = {
+     2054|status=0
+     30020|EPC=1133546465684
+     30159|ETC_PRICE=0
+}
+===== TCOCReponse =====
+Cramsg:
+code = 272
+isGenCdrTrigger = false
+isGenCbaTrigger = false
+mapField = {
+     11|sessionId=2233785415179481356
+     2054|status=4004
+     30020|EPC=5a4g6486411113fda35f
+     30021|PLATE_NUMBER=15C11909T
+     30159|ETC_PRICE=0
+}
+
